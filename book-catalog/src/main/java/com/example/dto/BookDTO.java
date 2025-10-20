@@ -4,7 +4,7 @@ package com.example.dto;
  * DTO representing book data returned via the API.
  */
 public class BookDTO {
-    private Long id;
+    private Integer id;
     private String title;
     private String genre;
     private double price;
@@ -12,17 +12,17 @@ public class BookDTO {
     private String author;
     private String seriesName;
 
-    /** @return ID */
-    public Long getId() {
-        return id;
+    /** 
+     * @param id
+     *                 id to set 
+     */
+    public void setId(Integer id) {
+        this.id = id;
     }
 
-    /**
-     * @param id
-     *                 ID to set
-     */
-    public void setId(Long id) {
-        this.id = id;
+    /** @return ID */
+    public Integer getId() {
+        return id;
     }
 
     /** @return title */

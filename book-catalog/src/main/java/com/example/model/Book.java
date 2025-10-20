@@ -8,8 +8,7 @@ import jakarta.persistence.*;
 @Entity
 public class Book {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private Integer id;
 
     private String title;
     private String genre;
@@ -22,7 +21,7 @@ public class Book {
     private Series series;
 
     /** @return ID of the book */
-    public Long getId() {
+    public Integer getId() {
         return id;
     }
 
@@ -30,7 +29,7 @@ public class Book {
      * @param id
      *                 ID to set
      */
-    public void setId(Long id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 

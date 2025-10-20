@@ -1,6 +1,7 @@
 package com.example.service;
 
 import com.example.dto.BookDTO;
+import com.example.dto.SeriesCreateDTO;
 import com.example.dto.SeriesDTO;
 import com.example.model.Book;
 import com.example.model.Series;
@@ -76,21 +77,26 @@ public class SeriesService {
     }
 
     /**
-     * Create a new series from a SeriesDTO.
+     * Create a new series from a SeriesCreateDTO.
      *
-     * @param seriesDTO
+     * @param seriesCreateDTO
      *                 DTO containing series data
      * @return created SeriesDTO
      */
-    public SeriesDTO createSeries(SeriesDTO seriesDTO) {
-        if (seriesDTO.getName() == null || seriesDTO.getName().isBlank()) {
+    public SeriesDTO createSeries(SeriesCreateDTO seriesCreateDTO) {
+        if (seriesRepository.findById(seriesCreateDTO.getId()) != null) {
+            throw new ResponseStatusException(HttpStatus.CONFLICT, "Series id must be unique.");
+        }
+        if (seriesCreateDTO.getName() == null || seriesCreateDTO.getName().isBlank()) {
             throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "Series name must be provided.");
         }
-        if (seriesRepository.findByName(seriesDTO.getName()) != null) {
+        if (seriesRepository.findByName(seriesCreateDTO.getName()) != null) {
             throw new ResponseStatusException(HttpStatus.CONFLICT, "Series name must be unique.");
         }
         Series series = new Series();
-        series.setName(seriesDTO.getName());
+        series.setId(seriesCreateDTO.getId());
+        series.setName(seriesCreateDTO.getName());
+
         Series saved = seriesRepository.save(series);
         return modelMapper.map(saved, SeriesDTO.class);
     }

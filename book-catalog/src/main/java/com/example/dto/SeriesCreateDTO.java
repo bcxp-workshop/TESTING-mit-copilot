@@ -1,14 +1,16 @@
 package com.example.dto;
 
-import java.util.List;
+import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
- * DTO representing series data returned via the API.
+ * DTO representing series data set via the API.
  */
-public class SeriesDTO {
+public class SeriesCreateDTO {
+    @Schema(description = "Series id", example = "1")
     private Integer id;
+
+    @Schema(description = "Series name", example = "Scheibenwelt")
     private String name;
-    private List<BookDTO> books;
 
     /** @return ID */
     public Integer getId() {
@@ -34,18 +36,5 @@ public class SeriesDTO {
      */
     public void setName(String name) {
         this.name = name;
-    }
-
-    /** @return books */
-    public List<BookDTO> getBooks() {
-        return books;
-    }
-
-    /**
-     * @param books
-     *                 books to set
-     */
-    public void setBooks(List<BookDTO> books) {
-        this.books = books;
     }
 }

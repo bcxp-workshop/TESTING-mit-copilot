@@ -1,6 +1,7 @@
 package com.example.controller;
 
 import com.example.dto.BookDTO;
+import com.example.dto.SeriesCreateDTO;
 import com.example.dto.SeriesDTO;
 import com.example.service.SeriesService;
 import org.springframework.http.HttpStatus;
@@ -73,11 +74,11 @@ public class SeriesController {
 
     /**
      * Create a new book series.
-     * @param seriesDTO series data
+     * @param seriesCreateDTO series data
      * @return created SeriesDTO
      */
     @PostMapping
-    public SeriesDTO createSeries(@RequestBody SeriesDTO seriesDTO) {
-        return seriesService.createSeries(seriesDTO);
+    public SeriesDTO createSeries(@RequestBody SeriesCreateDTO seriesCreateDTO) {
+        return seriesService.createSeries(seriesCreateDTO);
     }
 }

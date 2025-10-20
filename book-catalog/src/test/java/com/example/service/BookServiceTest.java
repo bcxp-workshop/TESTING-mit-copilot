@@ -50,7 +50,7 @@ class BookServiceTest {
         BookService service = new BookService(mock(BookRepository.class), repoSeries, mapper);
 
         Book book = new Book();
-        book.setId(42L);
+        book.setId(42);
         book.setTitle("Geheimnisvogel");
         book.setAuthor("Erika Mustermann");
         book.setGenre("Roman");
@@ -59,7 +59,7 @@ class BookServiceTest {
 
         BookDTO dto = service.toDTO(book);
 
-        assertEquals(42L, dto.getId());
+        assertEquals(42, dto.getId());
         assertEquals("Geheimnisvogel", dto.getTitle());
         assertEquals("Erika Mustermann", dto.getAuthor());
         assertEquals("Roman", dto.getGenre());

@@ -7,5 +7,6 @@ import org.springframework.data.jpa.repository.JpaRepository;
  * Repository for accessing Series entities from the database.
  */
 public interface SeriesRepository extends JpaRepository<Series, Long> {
+    Series findById(Integer id);
     Series findByName(String name);
 }

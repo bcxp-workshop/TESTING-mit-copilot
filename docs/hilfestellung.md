@@ -1,13 +1,6 @@
 # 💡 Hilfestellungen für den Workshop
 
-## **Allgemeine Tipps & Tricks**
 
-- **Schrittweise vorgehen:** Starte mit dem Testen einzelner Methoden, bevor du ganze Komponenten angehst.
-- **Kontext bereitstellen:** Beschreibe, was die Methode/Klasse tut und welche Randbedingungen zu testen sind.
-- **Nach Testideen fragen:** "`Welche kritischen Testfälle sollte ich für BookService.java abdecken?`"
-- **Teste auch Fehlerfälle:** Lass KI Szenarien vorschlagen, bei denen bewusste Fehler auftreten sollten.
-- **Dokumentiere Tests gut lesbar:** Testmethoden sinnvoll benennen (`shouldThrowException_forInvalidPrice`).
-- **Fasse abgedeckte und nicht abgedeckte Stellen zusammen:** Lass dir auflisten, wo noch Tests fehlen könnten.
 
 ---
 

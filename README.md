@@ -49,8 +49,8 @@ book-catalog/
 
 ## Ziel des Workshops
 
-- **Testlücken erkennen:** Analysiere gemeinsam mit ChatGPT und Github Copilot, an welchen Stellen im Projekt Tests fehlen, oberflächlich oder fehlerhaft sind.
-- **Tests verbessern:** Entwickle robuste, aussagekräftige und wartbare Unittests. Nutze dafür die Unterstützung durch LLMs zur Testgenerierung, -erweiterung und Reorganisation.
+- **Testlücken erkennen:** Analysiere gemeinsam mit Github Copilot, an welchen Stellen im Projekt Tests fehlen, oberflächlich oder fehlerhaft sind.
+- **Tests verbessern:** Entwickle robuste, aussagekräftige und wartbare Unittests. Nutze dafür die Unterstützung von Copilot zur Testgenerierung, -erweiterung und Reorganisation.
 - **Testabdeckung steigern:** Verwende Tools zur Testabdeckungsanalyse, um Verbesserungen sichtbar und messbar zu machen.
 
 ---
@@ -59,11 +59,20 @@ book-catalog/
 
 ### Codespace öffnen
 Github Codespace kann wie im Screenshot gezeigt geöffnet werden:  
-![codespace](docs/ScreenshotCodespace.png)  
-Für jeden Nutzer ist bereits ein Codespace für das Projekt vorbereitet.
+![codespace](docs/CodespaceTesting.png)  
 
-### Prompts
-Experimentiere frei mit Prompts, um gezielt Testfälle zu generieren oder bestehende Tests zu überarbeiten. Alternativ kannst du die Vorschläge und Prompts in [TIPPS](docs/tipps.md) nutzen.
+### Hinweise
+
+- **Schrittweise vorgehen:** Starte mit dem Testen einzelner Methoden, bevor du ganze Komponenten angehst.
+- **Kontext bereitstellen:** Beschreibe, was die Methode/Klasse tut und welche Randbedingungen zu testen sind.
+- **Nach Testideen fragen:** "`Welche kritischen Testfälle sollte ich für BookService.java abdecken?`"
+- **Teste auch Fehlerfälle:** Lass KI Szenarien vorschlagen, bei denen bewusste Fehler auftreten sollten.
+- **Lasse die Tests gut lesbar dokumentieren:** Testmethoden sinnvoll benennen (`shouldThrowException_forInvalidPrice`).
+- **Fasse abgedeckte und nicht abgedeckte Stellen zusammen:** Lass dir auflisten, wo noch Tests fehlen könnten.
+- **Teste die Github Copilot Befehle:** z.B. \tests
+
+### Hilfestellung
+Experimentiere gerne frei mit Prompts, um gezielt Testfälle zu generieren oder bestehende Tests zu überarbeiten. Alternativ kannst du die Vorschläge und Prompts in [hilfestellung](docs/hilfestellung.md) nutzen.
 
 ---
 

@@ -4,22 +4,24 @@ import jakarta.persistence.*;
 
 import java.util.List;
 
+import io.swagger.v3.oas.annotations.media.Schema;
+
 /**
  * Entity representing a Book Series.
  */
 @Entity
 public class Series {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private Integer id;
 
     private String name;
 
     @OneToMany(mappedBy = "series")
+    @Schema(hidden = true)
     private List<Book> books;
 
     /** @return ID of the series */
-    public Long getId() {
+    public Integer getId() {
         return id;
     }
 
@@ -27,7 +29,7 @@ public class Series {
      * @param id
      *                 ID to set
      */
-    public void setId(Long id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 
