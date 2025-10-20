@@ -67,9 +67,9 @@ Github Codespace kann wie im Screenshot gezeigt geöffnet werden:
 - **Kontext bereitstellen:** Beschreibe, was die Methode/Klasse tut und welche Randbedingungen zu testen sind.
 - **Nach Testideen fragen:** "`Welche kritischen Testfälle sollte ich für BookService.java abdecken?`"
 - **Teste auch Fehlerfälle:** Lass KI Szenarien vorschlagen, bei denen bewusste Fehler auftreten sollten.
-- **Lasse die Tests gut lesbar dokumentieren:** Testmethoden sinnvoll benennen (`shouldThrowException_forInvalidPrice`).
+- **Achte darauf dass Github Copilot verständlich arbeitet:** z.B. Testmethoden sinnvoll benennt.
 - **Fasse abgedeckte und nicht abgedeckte Stellen zusammen:** Lass dir auflisten, wo noch Tests fehlen könnten.
-- **Teste die Github Copilot Befehle:** z.B. \tests
+- **Teste den Github Copilot Befehl:** \tests
 
 ### Hilfestellung
 Experimentiere gerne frei mit Prompts, um gezielt Testfälle zu generieren oder bestehende Tests zu überarbeiten. Alternativ kannst du die Vorschläge und Prompts in [hilfestellung](docs/hilfestellung.md) nutzen.
